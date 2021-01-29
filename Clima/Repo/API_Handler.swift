@@ -25,7 +25,7 @@ class API_Handler : ObservableObject{
     }
   
     
-    //MARK: This function is used to make sure that we will hit the API once in a day
+    //MARK: This function will return true only if current date would't match with already saved date .
     private func isDateChaged() -> Bool{
         
         let currentDate = Date()
@@ -36,7 +36,7 @@ class API_Handler : ObservableObject{
         }
 
         if getDateAsStringFormat(date: oldDate) != getDateAsStringFormat(date: currentDate){
-            weatherInfoStore.deleteData()
+            
             print("date changed -> callAPIAndSaveData")
             return true
         }else{
@@ -47,8 +47,8 @@ class API_Handler : ObservableObject{
 
     
     func callAPIAndSaveData(){
-        if isDateChaged(){
-            
+//        if isDateChaged(){
+            weatherInfoStore.deleteData()
             requestWeatherInfo(url: URL(string : url)!, method: .get) { (result) in
                 if result{
                     print("Data Saved after API Call")
@@ -61,9 +61,9 @@ class API_Handler : ObservableObject{
                     print("Error")
                 }
             }
-        }else{
-            print("data already saved for today")
-        }
+//        }else{
+//            print("data already saved for today")
+//        }
     }
     
     

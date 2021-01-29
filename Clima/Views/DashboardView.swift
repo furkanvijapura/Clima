@@ -50,7 +50,6 @@ struct DashboardView: View {
             }
             
         }
-        
         .onChange(of: scenePhase) { phase in
             switch phase {
             case .active:

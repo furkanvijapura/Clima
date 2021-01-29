@@ -152,9 +152,11 @@ class WeatherInformationStore : ObservableObject{
             }
             
         }catch let error{
+            print("No Data Exist (:")
             print(error.localizedDescription)
         }
     }
+    
 
     
 }
