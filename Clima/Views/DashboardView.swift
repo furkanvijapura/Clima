@@ -175,7 +175,7 @@ struct DashboardView: View {
             VStack(spacing : 32){
                 HStack{
                     Image(systemName: "wind")
-                    Text("Wing Speed")
+                    Text("Wind Speed")
                     Spacer()
                     Text("\(dashboardViewModel.selectedCard.windSpeed ) meter/sec")
                 }

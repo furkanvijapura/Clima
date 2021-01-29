@@ -22,7 +22,7 @@ struct NotificationPermisisonView: View {
             VStack(spacing : 20){
             Text("Can we notify you ?")
                 .font(.system(size: 30, weight: .bold, design: .default))
-            Text("Please allow us to send you notifications for weahter alert")
+            Text("Please allow us to send you notifications for weather alert")
                 .font(.system(size: 18, weight: .regular, design: .default))
                 .multilineTextAlignment(.center)
             }.padding(24)
