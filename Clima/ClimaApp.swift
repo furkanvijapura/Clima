@@ -7,11 +7,16 @@
 
 import SwiftUI
 
+
+
 @main
 struct ClimaApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoadApplication()
+
+            
         }
     }
 }
